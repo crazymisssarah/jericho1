@@ -259,8 +259,8 @@ class InstaBot:
         log_string = 'Trying to login as %s...\n' % (self.user_login)
         self.write_log(log_string)
         self.login_post = {
-            'username': 'begoldish',
-            'password': 'Goldflower123'
+            'username': self.user_login,
+            'password': self.user_password
         }
 
         self.s.headers.update({
@@ -297,8 +297,7 @@ class InstaBot:
             finder = r.text.find(self.user_login)
             if finder != -1:
                 ui = UserInfo()
-                #self.user_id = ui.get_user_id_by_login(self.user_login)
-                self.user_id = 'begoldish'
+                self.user_id = self.user_login
                 self.login_status = True
                 log_string = '%s login success!' % (self.user_login)
                 self.write_log(log_string)
