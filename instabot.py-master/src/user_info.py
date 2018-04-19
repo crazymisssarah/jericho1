@@ -13,7 +13,7 @@ def get_user_info(self, username):
             self.user_login, now_time.strftime("%d.%m.%Y %H:%M"))
         self.write_log(log_string)
         if self.login_status == 1:
-            url = 'https://www.instagram.com/%s/?__a=1' % (username)
+            url = 'https://www.instagram.com/%s/' % (username)
             try:
                 r = self.s.get(url)
 
