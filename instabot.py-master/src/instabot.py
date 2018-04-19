@@ -259,8 +259,8 @@ class InstaBot:
         log_string = 'Trying to login as %s...\n' % (self.user_login)
         self.write_log(log_string)
         self.login_post = {
-            'username': self.user_login,
-            'password': self.user_password
+            'username': 'begoldish',
+            'password': 'Goldflower123'
         }
 
         self.s.headers.update({
